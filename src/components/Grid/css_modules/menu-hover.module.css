@@ -1,0 +1,7 @@
+.menuList {
+  border: 1px solid black;
+}
+.menuList span:hover,
+.menuList ul li:hover {
+  color: #83bcff;
+}
