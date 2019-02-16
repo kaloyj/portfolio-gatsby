@@ -4,12 +4,6 @@ import ProfileColumn from "./profile";
 import ContentColumn from "./content";
 import MenuColumn from "./menu";
 
-const imgStyle = {
-  height: "100%",
-  width: "100%",
-  objectFit: "cover"
-};
-
 const gridContainer = {
   display: "grid",
   border: "1px solid black",

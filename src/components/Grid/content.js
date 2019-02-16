@@ -21,6 +21,7 @@ const col2 = {
   border: "1px solid black"
 };
 
+// eslint-disable-next-line
 const pageTitleStyle = {
   fontSize: "3em",
   fontWeight: "100",
