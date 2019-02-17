@@ -1,4 +1,5 @@
 import React from "react";
+// import ContentCard from "../../templates/content/contentCard";
 
 const contentParentStyle = {
   gridArea: "contentarea",
@@ -42,49 +43,79 @@ const pageTitleStyle = {
   border: "1px solid black"
 };
 
+const contentData = [
+  {
+    header: "Education",
+    data: [
+      {
+        subItem: "High School",
+        subDescriptions: {
+          main: "St. Joseph's Academy",
+          date: "March 2015",
+          descriptions: ["3rd Honorable Mention", "I am MANDAUE Awardee"]
+        }
+      },
+      {
+        subItem: "Bachelor's Degree",
+        subDescriptions: {
+          main: "University of San Carlos",
+          date: "December 2018",
+          descriptions: [
+            "Bachelor of Science in Computer Science",
+            "Magna Cum Laude",
+            "1.25 GWA"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    header: "Work Experience",
+    data: [
+      {
+        subItem: "Full Scale",
+        subDescriptions: {
+          main: "Front End Developer",
+          date: "January 2019 - Present",
+          descriptions: ["Vue and React"]
+        }
+      },
+      {
+        subItem: "Coding Avenue",
+        subDescriptions: {
+          main: "On the Job Trainee",
+          date: "April 2018 - August 2018",
+          descriptions: ["Symfony"]
+        }
+      }
+    ]
+  }
+];
+
 const Content = () => (
   // change to something dynamic!
   <div id="content-column" style={contentParentStyle}>
-    <div style={col1}>
-      <div style={col1}>Education</div>
-      <div style={col2_1}>
-        <div style={col1}>High School</div>
-      </div>
-      <div style={col2_3}>
-        <div style={col1}>St. Joseph's Academy</div>
-        <div style={col1}>3rd Honorable Mention</div>
-        <div style={col1}>I am MANDAUE Awardee</div>
-      </div>
-      <div style={col2_1}>
-        <div style={col1}>Bachelor's Degree</div>
-      </div>
-      <div style={col2_3}>
-        <div style={col1}>University of San Carlos</div>
-        <div style={col1}>Bachelor of Science in Computer Science</div>
-        <div style={col1}>Magna Cum Laude</div>
-        <div style={col1}>1.25 GWA</div>
-      </div>
-    </div>
-
-    <div style={col1}>
-      <div style={col1}>Experience</div>
-      <div style={col2_1}>
-        <div style={col1}>Full Scale</div>
-      </div>
-      <div style={col2_3}>
-        <div style={col1}>Front End Developer</div>
-        <div style={col1}>January 2019 - Present</div>
-        <div style={col1}>Vue and React</div>
-      </div>
-      <div style={col2_1}>
-        <div style={col1}>Coding Avenue</div>
-      </div>
-      <div style={col2_3}>
-        <div style={col1}>On the Job Trainee</div>
-        <div style={col1}>April 2018 - August 2018</div>
-        <div style={col1}>Symfony</div>
-      </div>
-    </div>
+    {contentData.map(el => {
+      return (
+        <>
+          <div style={col1}>{el.header}</div>
+          {el.data.map(peice => {
+            return (
+              <>
+                <div style={col2_1}>{peice.subItem}</div>
+                <div style={col2_3}>
+                  <div style={col1}>{peice.subDescriptions.main}</div>
+                  <div style={col1}>{peice.subDescriptions.date}</div>
+                  {peice.subDescriptions.descriptions.map(descp => (
+                    <div style={col1}>{descp}</div>
+                  ))}
+                </div>
+              </>
+            );
+          })}
+        </>
+      );
+    })}
   </div>
 );
 

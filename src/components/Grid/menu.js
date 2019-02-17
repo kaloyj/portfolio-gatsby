@@ -21,43 +21,45 @@ const listStyle = {
   border: "1px solid black"
 };
 
+const navMenuStyle = {
+  flex: "0 0 92%",
+  display: "flex",
+  flexFlow: "row wrap",
+  marginTop: "1%",
+  marginLeft: "4%",
+  position: "sticky",
+  top: "1%",
+  border: "2px solid yellow"
+};
+
 const Menu = () => (
   <div id="menu-column" style={menuParentStyle}>
-    <div className={menuHoverStyles.menuList} style={col1}>
-      <span>One</span>
-      <ul style={listStyle}>
-        <li>One point two</li>
-        <li>One point two</li>
-        <li>One point two</li>
-        <li>One point two</li>
-      </ul>
-    </div>
-    <div className={menuHoverStyles.menuList} style={col1}>
-      <span>Two</span>
-      <ul style={listStyle}>
-        <li>One point two</li>
-        <li>One point two</li>
-        <li>One point two</li>
-        <li>One point two</li>
-      </ul>
-    </div>
-    <div className={menuHoverStyles.menuList} style={col1}>
-      <span>Three</span>
-      <ul style={listStyle}>
-        <li>One point two</li>
-        <li>One point two</li>
-        <li>One point two</li>
-        <li>One point two</li>
-      </ul>
-    </div>
-    <div className={menuHoverStyles.menuList} style={col1}>
-      <span>Four</span>
-      <ul style={listStyle}>
-        <li>One point two</li>
-        <li>One point two</li>
-        <li>One point two</li>
-        <li>One point two</li>
-      </ul>
+    <div className="navMenu" style={navMenuStyle}>
+      <div className={menuHoverStyles.menuList} style={col1}>
+        <span>One</span>
+        <ul style={listStyle}>
+          <li>One point two</li>
+          <li>One point two</li>
+          <li>One point two</li>
+          <li>One point two</li>
+        </ul>
+      </div>
+      <div className={menuHoverStyles.menuList} style={col1}>
+        <span>Two</span>
+        <ul style={listStyle}>
+          <li>One point two</li>
+          <li>One point two</li>
+          <li>One point two</li>
+          <li>One point two</li>
+        </ul>
+      </div>
+      <div className={menuHoverStyles.menuList} style={col1}>
+        <span>Three</span>
+        <ul style={listStyle}>
+          <li>One point two</li>
+          <li>One point two</li>
+        </ul>
+      </div>
     </div>
   </div>
 );

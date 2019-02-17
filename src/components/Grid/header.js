@@ -2,23 +2,24 @@ import React from "react";
 
 const headerParentStyle = {
   gridArea: "header",
-  border: "1px solid black",
+  border: "2px solid orange",
   display: "flex",
   flexFlow: "row wrap",
   alignItems: "center",
-  backgroundColor: "#0b132b",
-  color: "#fff"
+  backgroundColor: "#fff",
+  color: "#1c2541",
+  position: "sticky",
+  top: "0"
 };
 
 const col4 = {
   border: "1px solid black",
-  marginLeft: "4%",
+  margin: "1%",
   flex: "0 0 20%"
 };
 
 const titleStyle = {
-  fontSize: "2em",
-  border: "1px solid white"
+  fontSize: "2em"
 };
 
 const Header = () => (

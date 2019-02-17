@@ -10,7 +10,7 @@ const imgStyle = {
 
 const parentProfileStyle = {
   gridArea: "profile",
-  borderRight: "3px solid #0b132b",
+  borderRight: "3px solid #83bcff",
   display: "flex",
   flexFlow: "row wrap",
   alignContent: "flex-start"

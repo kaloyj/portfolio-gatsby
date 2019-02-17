@@ -10,10 +10,10 @@ const gridContainer = {
   display: "grid",
   border: "1px solid black",
   minWidth: "100vh",
-  gridTemplateRows: "3fr 1fr 30fr 1fr 14fr 1fr 14fr",
+  gridTemplateRows: "min-content 0.5fr 31.5fr 0.5fr 14fr 0.5fr 14fr",
   gridTemplateColumns: "0.5fr 15fr 0.5fr 35fr 0.5fr 10fr 0.5fr",
   gridTemplateAreas: `
-    'header header header header header header header'
+    'header header header header header menuarea menuarea'
     '. . . . . menuarea menuarea'
     '. profile . contentarea . menuarea menuarea'
     '. . . . . menuarea menuarea'
