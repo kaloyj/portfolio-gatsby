@@ -61,7 +61,7 @@ const contentData = [
 const Content = () => (
   <div id="content-column" style={contentParentStyle}>
     {contentData.map(el => (
-      <ContentCard header={el.header} data={el.data} />
+      <ContentCard header={el.header} data={el.data} key={el.header} />
     ))}
   </div>
 );
