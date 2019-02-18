@@ -5,6 +5,7 @@ import ContentColumn from "./content";
 import MenuColumn from "./menu";
 import ProjectsAndWorks from "./projectsAndWorks";
 import Proficiency from "./proficiency";
+import CarouselPage from "../Carousel/CarouselPage";
 
 const gridContainer = {
   display: "grid",
